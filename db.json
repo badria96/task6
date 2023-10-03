@@ -1,0 +1,96 @@
+{
+  "attendance": [
+    {
+      "id": 1,
+      "date": "2023-10-01",
+      "studentName": "John Doe",
+      "status": "Present"
+    },
+    {
+      "id": 2,
+      "date": "2023-10-01",
+      "studentName": "Jane Smith",
+      "status": "Absent"
+    },
+    {
+      "date": "2023-10-01",
+      "studentName": "sam",
+      "isPresent": true,
+      "id": 3
+    },
+    {
+      "date": "2023-10-01",
+      "studentName": "badria",
+      "isPresent": false,
+      "id": 4
+    },
+    {
+      "date": "2023-10-01",
+      "studentName": "amira",
+      "isPresent": true,
+      "id": 5
+    },
+    {
+      "date": "2023-10-03",
+      "studentName": "badria",
+      "isPresent": true,
+      "id": 6
+    },
+    {
+      "date": "2023-10-03",
+      "studentName": "sam",
+      "isPresent": true,
+      "id": 7
+    },
+    {
+      "date": "2023-10-03",
+      "studentName": "maryam",
+      "isPresent": true,
+      "id": 8
+    },
+    {
+      "date": "2023-10-03",
+      "studentName": "naser",
+      "isPresent": true,
+      "id": 9
+    }
+  ],
+  "files": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "id": 12
+    }
+  ]
+}

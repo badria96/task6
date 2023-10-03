@@ -1,0 +1,46 @@
+<app-dashboard></app-dashboard>
+<br><br>
+<div class="container">
+  <div class="attendance-image">
+    <img src="https://img.freepik.com/free-vector/data-report-illustration-concept_114360-883.jpg?size=626&ext=jpg&ga=GA1.2.2121253262.1687270789&semt=ais" alt="Take Attendance" class="animated-image">
+  </div>
+  <div class="attendance-content">
+    <h2><b>Data Management</b></h2>
+    <p>Select a date to show data:</p>
+    <input type="date" [(ngModel)]="selectedDate"><br><br>
+    <button class="btn btn-primary primary-button" (click)="loadData()">Load Data</button><br><br>
+    <div *ngIf="attendanceData">
+      <h3><b>Attendance Data:</b></h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Student Name</th>&nbsp;&nbsp;&nbsp;&nbsp;
+            <th>Attendance Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of attendanceData">
+            <td>{{ student.studentName }}</td>&nbsp;&nbsp;&nbsp;&nbsp;
+            <td>{{ student.isPresent ? 'Present' : 'Absent' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br><br>
+    <div *ngIf="fileUploadData">
+      <h3><b>File Upload Data:</b></h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>File Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let file of fileUploadData">
+            <td>{{ file.name }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      </div>
+</div>

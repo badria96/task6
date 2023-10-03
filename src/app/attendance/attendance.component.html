@@ -1,0 +1,53 @@
+<app-dashboard></app-dashboard>
+<br><br>
+<div class="container">
+  <div class="attendance-image">
+    <img src="https://image.spreadshirtmedia.com/image-server/v1/products/T1459A839PA3861PT28D1034068779W10000H4384/views/1,width=550,height=550,appearanceId=839,backgroundColor=F2F2F2/take-attendance-black-sticker.jpg" alt="Take Attendance" class="animated-image">
+  </div>
+  <div class="attendance-content">
+  <h2><b>Record Attendance</b></h2>
+  <form (ngSubmit)="recordAttendance()">
+    <div class="form-group">
+      <label for="studentName">Enter Student Name</label>&nbsp;&nbsp;
+      <input type="text" id="studentName" name="studentName" [(ngModel)]="studentName" required>
+    </div>
+    <br>
+    <div class="form-group" >
+      <label>Mark Attendance : </label>&nbsp;
+      <label class="radio-label">
+        <input type="radio" name="attendance" [(ngModel)]="isPresent" [value]="true"> Present
+      </label>&nbsp;
+      <label class="radio-label">
+        <input type="radio" name="attendance" [(ngModel)]="isPresent" [value]="false"> Absent
+      </label>
+    </div>
+    <br>
+    <button  type="submit" class="btn btn-primary primary-button">Submit</button>
+  </form>
+   <br>
+  <button class="btn btn-secondary secondary-button" (click)="toggleAttendanceList()">Show Attendance List</button>
+   <br>
+  <div *ngIf="showAttendanceList"><br>
+    <h3><b>Attended Students:</b></h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Student Name</th>&nbsp;&nbsp;
+          <th>Attendance Status</th>&nbsp;&nbsp;&nbsp;&nbsp;
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let attendedStudent of attendedStudents">
+          <td>{{ attendedStudent.studentName }}</td>&nbsp;&nbsp;
+          <td>{{ attendedStudent.isPresent ? 'Present' : 'Absent' }}</td>&nbsp;&nbsp;&nbsp;&nbsp;
+          <td>
+            <button class="btn btn-link" (click)="editAttendance(attendedStudent)">
+              Edit
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>    
+  </div>
+</div>

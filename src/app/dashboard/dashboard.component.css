@@ -1,0 +1,47 @@
+.dashboard {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  height: 80px;
+}
+
+.dashboard-heading {
+  font-weight: bold;
+  margin-right: 20px;
+  color: hwb(0 98% 2%);
+  align-items: center;
+  font-size: xx-large;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+.dashboard-nav {
+  list-style: none; 
+  align-items: center;
+ font-size: large;
+  display: flex;
+  gap: 20px; 
+  color: hwb(0 98% 2%);
+}
+
+.dashboard-nav li {
+  opacity: 0.8; 
+}
+
+.dashboard-nav a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold; 
+}
+
+  
+  a:hover {
+    font-weight: bold;
+  }
+  
+  .dashboard-container {
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+  }
+  

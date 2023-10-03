@@ -1,0 +1,78 @@
+/* Add this to your CSS file (e.g., styles.css) */
+.container {
+    width: 60%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add some padding for spacing */
+    border: 1px solid #ccc; /* Add a border for the box effect */
+    background-color: #f9f9f9; /* Background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    text-align: center; /* Center text inside the container */
+  }
+  .table{
+    margin: 0 auto;
+  }  
+
+.primary-button {
+    background-color: #007bffae; 
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer;
+    border-radius: 30px; 
+  }
+
+  .fileInput{
+    background-color: #a2a3a4ae; 
+    color: #110101; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer;
+    border-radius: 30px; 
+  }
+
+  .primary-button:hover{
+    background-color: #503f99;
+  }
+
+  .secondary-button:hover{
+    background-color: #a4a3a7;
+  }
+  
+  .secondary-button {
+    background-color: #6c757d; 
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    border-radius: 30px;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .attendance-image {
+    flex: 1; /* Takes up one-third of the container */
+    text-align: center;
+  }
+  
+  .attendance-content {
+    flex: 2; /* Takes up two-thirds of the container */
+  }
+  
+  .animated-image {
+    width: 350px; /* Set the width of your image */
+    animation: fadeInUp 2s ease; /* Example animation, you can define your animation */
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

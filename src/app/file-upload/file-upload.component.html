@@ -1,0 +1,38 @@
+<app-dashboard></app-dashboard>
+<br><br>
+<div class="container">
+  <div class="attendance-image">
+    <img src="https://img.freepik.com/free-vector/illustration-cloud-storage_53876-37579.jpg?size=626&ext=jpg&ga=GA1.2.2121253262.1687270789&semt=ais" alt="Take Attendance" class="animated-image">
+  </div>
+  <div class="attendance-content">
+    <h2><b>File Upload</b></h2>
+    <form  (ngSubmit)="uploadFile()" enctype="multipart/form-data">
+      <div class="form-group">
+        <input type="file" id="fileInput" name="fileInput" (change)="onFileSelected($event)" accept=".pdf, .doc, .docx">
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary primary-button" [disabled]="!selectedFile">Upload</button>
+    </form>
+    <br>
+    <button class="btn btn-secondary secondary-button" (click)="toggleFileList()">Toggle File List</button>
+
+    <div *ngIf="showFileList">
+      <br>
+      <h3><b>Uploaded Files :</b></h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>File Name</th>&nbsp;&nbsp;&nbsp;&nbsp;
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let uploadedFile of uploadedFiles">
+          <td>{{ uploadedFile.name }}</td>&nbsp;&nbsp;&nbsp;&nbsp;
+          <td><button class="btn btn-danger btn-sm" (click)="deleteFile(uploadedFile)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
